@@ -1,7 +1,7 @@
 require 'pry'
 
 class Artist
-  extend Memorable
+  extend Memorable, Findable
   attr_accessor :name
   attr_reader :songs
 
@@ -11,7 +11,7 @@ class Artist
     @@artists << self
     @songs = []
   end
-  
+
   def self.all
     @@artists
   end
